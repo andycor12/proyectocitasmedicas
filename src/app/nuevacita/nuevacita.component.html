@@ -1,0 +1,74 @@
+<div class="card">
+    <div class="card-header">
+		<h4> Nueva Citas </h4>
+	</div>
+    <div class="card-body">
+
+      
+        <p>{{nuevaform.status}}</p>
+            <form [formGroup]="nuevaform">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="asunto">Asunto:</label>
+                            <input type="text" formControlName="asunto"  name="asunto" id="asunto" class="form-control" placeholder="asunto" tabindex="1">
+                            <div class="error" *ngIf="nuevaform.controls.asunto.errors?.required">Campo de carateres de 3 a 20 digitos</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="Paciente">Paciente:</label>
+                            <select class="form-control" formControlName="paciente"   id="control1"  name="control1"> 
+                                 <option>Andy caicedo</option>
+                            </select> 
+                            <div class="error" *ngIf="nuevaform.controls.paciente.errors?.required">Campo requerido seleccion de pacientes</div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="Medico">Medico:</label>
+                            <select class="form-control" formControlName="medico"   id="control1"  name="control1"> 
+                                <option>Andy caicedo</option>
+                            </select> 
+                            <div class="error" *ngIf="nuevaform.controls.medico.errors?.required">Campo requerido seleccion de medicos</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="fechahora">Fecha/Hora:</label>
+                            <input type="datetime-local" formControlName="fecha"  name="fechahora" id="fechahora" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="nuevaform.controls.fecha.errors?.required">Campo requerido fecha y hora</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="Nota">Nota:</label>
+                            <input type="text" name="Nota"  formControlName="nota" placeholder="nota" id="Nota" class="form-control" placeholder="Nota" tabindex="1">
+                            <div class="error" *ngIf="nuevaform.controls.nota.errors?.required">Campo requerido notas de la cita</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="Enfermedad">Enfermedad:</label>
+                        <input type="text" name="Enfermedad" id="Enfermedad" formControlName="enfermedad"  class="form-control" placeholder="Enfermedad" tabindex="1">
+                        <div class="error" *ngIf="nuevaform.controls.enfermedad.errors?.required">Campo requerido enfermedad</div>
+                    </div>
+                    </div>
+                </div>
+                <button [disabled]="!nuevaform.valid" type="submit" (click)="showModal()" class="button">Guardar</button>
+
+</div>
+</form>
+
+
+        
+
+    </div>
+</div>
+    
+
+
+       

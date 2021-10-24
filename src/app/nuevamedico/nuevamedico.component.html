@@ -1,0 +1,61 @@
+<div class="card">
+	<div class="card-header">
+		<h4> Nuevo medico</h4>
+	</div>
+    <div class="card-body">
+        <p>{{medform.status}}</p>
+        <form [formGroup]="medform">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="Area">Area:</label>
+                            <select class="form-control" formControlName="area" id="control1"  name="control1"> 
+                                 <option>modulo 1</option>
+                            </select>
+                            <div class="error" *ngIf="medform.controls.area.errors?.required">Campo de seleccion de areas</div> 
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" formControlName="nombre"  name="nombre" id="nombre" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="medform.controls.nombre.errors?.required">Campo requerido de nombres del medico</div> 
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" formControlName="apellido"  name="apellido" id="apellido" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="medform.controls.apellido.errors?.required">Campo requerido de apellido del medico</div> 
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="direccion">Direccion:</label>
+                            <input type="text" formControlName="direccion"  name="direccion" id="direccion" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="medform.controls.direccion.errors?.required">Campo requerido de direccion del medico</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" formControlName="email"  name="email" id="email" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="medform.controls.email.errors?.required">Campo requerido de email del medico</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="telefono">Telefono:</label>
+                            <input type="text" formControlName="telefono"  name="telefono" id="telefono" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="medform.controls.telefono.errors?.required">Campo requerido de telefono del medico</div>
+                        </div>
+                    </div>
+
+                    <button [disabled]="!medform.valid" type="submit" (click)="showModal()" class="button">Guardar</button>
+
+         </div>
+        </div>
+        </form>
+    </div>
+</div>

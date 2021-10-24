@@ -1,0 +1,65 @@
+<div class="card">
+	<div class="card-header">
+		<h4> Nuevo Usuario</h4>
+	</div>
+    <div class="card-body">
+        
+        <p>{{usersform.status}}</p>
+        <form [formGroup]="usersform">
+     
+            <div class="form-group">
+                <div class="row">
+                    
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" formControlName="nombre"  name="nombre" id="nombre" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="usersform.controls.nombre.errors?.required">Campo de requirido de nombre del usuario</div> 
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="nick">Nick:</label>
+                            <input type="text" formControlName="nick"  name="nick" id="nick" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="usersform.controls.nick.errors?.required">Campo de requirido de nick del usuario</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" formControlName="email"  name="email" id="email" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="usersform.controls.nick.errors?.required">Campo de requirido de email del usuario</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <select class="form-control" formControlName="estado" id="control1"  name="control1"> 
+                                 <option>ACTIVO</option>
+                                 <option>INACTIVO</option>
+                            </select>
+                            <div class="error" *ngIf="usersform.controls.estado.errors?.required">Campo de requirido de seleccion estado</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="c1">Contraseña:</label>
+                            <input type="text" formControlName="c1"  name="c1" id="c1" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="usersform.controls.c1.errors?.required">Campo de requirido de nick del usuario</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="c2">Confirmacion de contraseña:</label>
+                            <input type="text" formControlName="c2"  name="c2" id="email" class="form-control" tabindex="1">
+                            <div class="error" *ngIf="usersform.controls.c2.errors?.required">Campo de requirido de confirmacion de contraseña del usuario</div>
+                        </div>
+                    </div>
+
+                    <button [disabled]="!usersform.valid" type="submit" (click)="showModal()" class="button">Guardar</button>
+
+         </div>
+        </div>
+        </form>
+    </div>
+</div>

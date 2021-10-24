@@ -1,0 +1,111 @@
+<div class="card">
+	<div class="card-header">
+		<h4>Reporte de Citas Medicas</h4>
+	</div>
+
+	<div class="card-body">
+  
+    
+<br>
+<br>
+
+      <form >
+    <div class="form-group">
+            <div class="row">
+                
+                <div class="col-sm-6 col-lg-3">
+                  <div class="form-group has-success">
+                    <label for="paciente">Paciente:</label>
+                    <select class="form-control" formControlName="paciente" id="control1"  name="control1"> 
+                        <option>Lucas</option>
+                  </select> 
+                  
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="form-group">
+                      <label for="medico">Medico:</label>
+                      <select class="form-control" formControlName="medico" id="control1"  name="control1"> 
+                     
+                        <option>Andy caicedo</option>
+                    </select> 
+                   
+                    </div>
+                   
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <div class="form-group has-success">
+                      <label for="Finicial">Fecha Inicial:</label>
+                      <input type="date" formControlName="Finicial" value="Success" class="form-control form-control-success">
+                     
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <div class="form-group has-success">
+                      <label for="Ffinal">Fecha Final:</label>
+                      <input type="date" formControlName="Ffinal" value="Success" class="form-control form-control-success">
+                     
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <div class="form-group has-success">
+                      <label for="estado">Estado:</label>
+                    <select class="form-control" formControlName="estado" id="control1"  name="control1"> 
+                     
+                      <option>Lucas</option>
+                  </select> 
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <div class="form-group has-success">
+                      <label for="pago">Pago:</label>
+                      <select class="form-control" formControlName="pago" id="control1"  name="control1"> 
+                        <option>Pendiente</option>
+                    </select>
+                    </div>
+                  </div>
+                  <button type="submit"  class="button">Procesar</button>
+                
+            </div>
+            </div>
+          </form> 
+
+       
+
+
+
+              <br>
+              <br>
+              <br>
+                  <table class="table table-bordered table-hover">
+                    <thead>
+                        <th>Asunto</th>
+                        <th>Paciente</th>
+                        <th>Medico</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Pago</th>
+                        <th>Costo</th>
+                    </thead>
+                   
+                  <tbody>
+                    <tr>
+                      <td>Nueva cita</td>
+                      <td>Sebastian caicedo</td>
+                      <td>Rodrigo guirao</td>
+                      <td>2016-11-26</td>
+                      <td>Pendiente</td>
+                      <td>Pendiente</td>
+                      <td>$0.00</td>
+                    </tr>
+
+                  </tbody>
+                    
+                
+                    </table>
+                    <h1>Total: $0.00</h1>
+                    <button type="button" class="btn btn-primary">Reporte en PDF</button>
+                    </div>
+                   
+
+</div>

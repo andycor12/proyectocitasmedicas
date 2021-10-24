@@ -1,0 +1,66 @@
+<div class="card">
+	<div class="card-header">
+		<h4> Nuevo Paciente </h4>
+	</div>
+    <div class="card-body">
+
+        <p>{{pacNueva.status}}</p>
+        <form [formGroup]="pacNueva">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" name="nombre" id="nombre" formControlName="nombre"  class="form-control" placeholder="Nombre" tabindex="1">
+                                <div class="error" *ngIf="pacNueva.controls.nombre.errors?.required">Campo de carateres de 3 a 20 digitos</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" name="apellido" id="apellido" formControlName="apellido" class="form-control" placeholder="Apellido" tabindex="1">
+                                <div class="error" *ngIf="pacNueva.controls.apellido.errors?.required">Campo de carateres de 3 a 20 digitos</div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                    <label class="label" for="genero">Genero:</label><br>
+                                    <input id="male" type="radio" formControlName="genero"  name="gender" value="male">
+                                    <label for="male">Masculino</label>
+                                    <br>
+                                    <input id="female" type="radio" formControlName="genero"  name="gender" value="female">
+                                    <label for="female">Femenino</label>
+                                    <div class="error" *ngIf="pacNueva.controls.genero.errors?.required">Campo de requerido selecciona una</div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label for="fecha">Fecha:</label>
+                                <input type="date" name="fecha" formControlName="fecha"  id="fecha" class="form-control" tabindex="1">
+                                <div class="error" *ngIf="pacNueva.controls.fecha.errors?.required">Campo de carateres de 3 a 20 digitos</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label for="direccion">Direccion:</label>
+                                <input type="text" name="direccion" id="direccion" formControlName="direccion" class="form-control" tabindex="1">
+                                <div class="error" *ngIf="pacNueva.controls.direccion.errors?.required">Campo de carateres de 3 a 20 digitos</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" name="email" id="email" formControlName="email" class="form-control" tabindex="1">
+                                <div class="error" *ngIf="pacNueva.controls.email.errors?.required">Campo de carateres de 3 a 20 digitos</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button [disabled]="!pacNueva.valid" type="submit" (click)="showModal()" class="button">Guardar</button>
+                </div>
+                
+            </form>
+            </div>
+     </div>
